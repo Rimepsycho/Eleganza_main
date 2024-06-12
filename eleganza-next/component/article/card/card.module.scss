@@ -1,0 +1,116 @@
+/* 卡片 */
+  .cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  justify-content: center;
+  align-items: start;
+  margin-top: 40px;
+  gap: 40px;
+}
+
+.card {
+  border-style: none;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: var(--color-primary-light);
+}
+.article-img{
+  width: 100%;
+  height: 264px;
+  
+  img{
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+
+
+.article-text {
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.article-text h3 {
+  font-family: var(--font-noto-sans);
+  font-size: var(--fs-p);
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.article-text time {
+  color: var(--color-text-dark);
+  font-family: 'Noto Sans';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.article-text p {
+  color: var(--color-text-dark);
+  font-family: var(--font-noto-sans);
+  font-size: var(--fs-p);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@media screen and (max-width: 375px) {
+  .cards-container {
+    display: flex; 
+    flex-direction: column; 
+    gap: 16px; 
+  }
+
+  .card {
+    display: flex; 
+    flex-direction: row; 
+    width: 100%; 
+    border: none; 
+    padding: 10px; 
+
+    .article-img {
+      flex:1; 
+      width: 72px; 
+      height: auto; 
+
+      & img {
+        width: 100%; 
+        object-fit: cover; 
+      }
+    }
+
+    .article-text {
+      flex: 2; 
+      padding-left: 10px; 
+      overflow: hidden; 
+
+      h3 {
+        font-size: var(--fs-hint);
+        font-family: var(--font-noto-sans);
+        font-weight: 400;
+      }
+
+      time {
+        font-size: 10px;
+        color: var(--color-text-dark);
+        font-family: var(--font-inter);
+      }
+
+      p {
+        font-size: var(--fs-hint);
+        font-family: var(--font-noto-sans);
+        font-weight: 400;
+        white-space: nowrap;
+        overflow: hidden; 
+        text-overflow: ellipsis; 
+        max-width: 227px;
+      }
+    }
+  }
+}

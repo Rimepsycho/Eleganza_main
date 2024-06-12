@@ -1,0 +1,49 @@
+.login-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 让页面内容垂直居中 */
+    background-color: white; /* 背景白色 */
+    border: 1px solid #dee2e6; /* 边框颜色 */
+    border-radius: 8px; /* 圆角 */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* 添加阴影 */
+    padding: 20px; /* 内边距 */
+    max-width: 400px; /* 最大宽度 */
+    margin: auto; /* 居中 */
+  }
+  
+  .login-page h2 {
+    margin-bottom: 20px; /* 标题下方的间距 */
+  }
+  
+  .login-page input {
+    width: 100%; /* 输入框占满容器 */
+    padding: 10px; /* 内边距 */
+    margin-bottom: 10px; /* 下方间距 */
+    border: 1px solid #ced4da; /* 边框颜色 */
+    border-radius: 4px; /* 圆角 */
+  }
+  
+  .login-page input:focus {
+    border-color: #80bdff; /* 聚焦时的边框颜色 */
+    outline: none; /* 取消默认的边框 */
+  }
+  
+  .login-page .error-message {
+    color: red; /* 错误消息的颜色 */
+    margin-bottom: 10px; /* 下方间距 */
+  }
+  
+  .login-page button {
+    padding: 10px 20px; /* 按钮的内边距 */
+    border: none; /* 无边框 */
+    background-color: #007bff; /* 按钮背景颜色 */
+    color: white; /* 按钮文字颜色 */
+    border-radius: 4px; /* 按钮圆角 */
+    cursor: pointer; /* 鼠标样式 */
+  }
+  
+  .login-page button:hover {
+    background-color: #0056b3; /* 鼠标悬停时的颜色 */
+  }

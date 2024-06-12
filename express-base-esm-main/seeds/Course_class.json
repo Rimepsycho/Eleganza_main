@@ -1,0 +1,22 @@
+[
+  {
+    "course_class_id": 1,
+    "level": "初階"
+  },
+  {
+    "course_class_id": 2,
+    "level": "中階"
+  },
+  {
+    "course_class_id": 3,
+    "level": "高階"
+  },
+  {
+    "course_class_id": 4,
+    "level": "團體班"
+  },
+  {
+    "course_class_id": 5,
+    "level": "大師班"
+  }
+]

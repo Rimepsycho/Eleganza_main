@@ -1,0 +1,39 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; 
+  padding: 10px 0; 
+
+  .pagination-number {
+    padding: 10px;
+    margin: 0 10px; 
+    text-decoration: none; 
+    color: #333; 
+    font-size: 16px; 
+    border-radius: 4px;
+
+    &:hover {
+      color: #fffdfd;
+      background-color: #8C8584;
+    }
+  }
+  .pagination-arrow {
+    margin: 0 10px;
+    padding:0  10px;
+
+  }
+  .active {
+    color: #fffdfd;
+    background-color: #322826;
+  }
+}
+
+.pagination-arrow {
+  cursor: pointer;
+
+  img {
+    width: 20px; 
+    height: auto;
+  }
+}

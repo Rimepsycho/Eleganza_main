@@ -1,0 +1,62 @@
+<div className={pageCart.cartContainer}>
+            {/* 遍历购物车项目并显示 */}
+            {cartItems.map((item) => (
+              <div className={pageCart.product} key={item.id}>
+                <article className={pageCart['product-card-middle']}>
+                  <img
+                    src={item.product_img || 'default-img.jpg'}
+                    className={pageCart['product-image-c']}
+                    loading="lazy"
+                  />
+                  <section className={pageCart['product-info']}>
+                    <h2>
+                      {item.product_name || item.course_name}{' '}
+                      {/* 显示商品或课程名称 */}
+                    </h2>
+                    <p>{item.teacher_name} 教师</p>
+                  </section>
+                  <div className={pageCart['quantity-selector']}>
+                    <button
+                      className={pageCart['quantity-minus']}
+                      onClick={() => updateQuantity(item, item.quantity - 1)}
+                    >
+                      -
+                    </button>
+                    <input
+                      type="number"
+                      value={item.quantity}
+                      className={pageCart['quantity-input']}
+                      onChange={(e) =>
+                        updateQuantity(item, parseInt(e.target.value, 10))
+                      }
+                    />
+                    <button
+                      className={pageCart['quantity-plus']}
+                      onClick={() => updateQuantity(item, item.quantity + 1)}
+                    >
+                      +
+                    </button>
+                  </div>
+                  <p className={pageCart['product-price']}>
+                    ${item.product_price || item.course_price}{' '}
+                    {/* 显示商品价格 */}
+                  </p>
+                </article>
+              </div>
+            ))}
+
+            {/* 购物车汇总信息 */}
+            <div className={pageCart.cartSummary}>
+              <h2>共{itemCount}项商品</h2>
+              <div className={pageCart.subtotalContainer}>
+                <span>小计</span>
+                <span>${total}</span> {/* 显示购物车总金额 */}
+              </div>
+              <button
+                className={pageCart.checkoutButton}
+                onClick={() => alert('前往付款')}
+              >
+                前往付款
+              </button>
+            </div>
+          </div>

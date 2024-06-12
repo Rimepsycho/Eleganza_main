@@ -1,0 +1,45 @@
+.filter-left {
+  top: 100px;
+  .filter-option {
+    margin-bottom: 24px;
+
+    .option-name {
+      margin-bottom: 8px;
+
+      & label {
+        margin-bottom: 4px;
+      }
+    }
+  }
+
+  .checkbox {
+    display: none;
+  }
+
+  .checkbox + label {
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    padding-left: 20px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+      border: 1px solid #322826;
+      border-radius: 3px;
+      background-color: transparent;
+    }
+  }
+
+  .checkbox:checked + label::before {
+    background-color: #322826;
+  }
+  @media (max-width: 992px) {
+    font-size: 16px;
+  }
+}

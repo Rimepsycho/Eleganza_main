@@ -1,0 +1,55 @@
+.side-content {
+  grid-column: 3;
+  color: var(--color-text-dark);
+  font-family: var(--font-noto-sans);
+  font-size: var(--fs-p);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  @media screen and (max-width: 375px) {
+    display: none;
+  }
+}
+
+
+
+.side-card {
+  width: 279px;
+  height: auto;
+  margin-bottom: 20px; /* 每個卡片之間留一些間距 */
+ 
+}
+
+.side-img {
+  width: 100%;
+  height: auto;
+  & img {
+    width: 100%;
+    border-radius: 8px;
+  }
+}
+
+.side-text {
+  align-items: center;
+  flex-wrap: wrap;
+  height: auto;
+}
+
+.side-date {
+  color: var(--color-text-dark);
+  font-family: var(--font-noto-sans);
+  font-size: var(--fs-hint);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.side-title {
+  color: var(--color-text-dark);
+  font-family: var(--font-noto-serif);
+  font-size: var(--fs-p);
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}

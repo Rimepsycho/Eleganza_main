@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+   <title>Title</title>
+   <!-- Required meta tags -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+   <!-- Bootstrap CSS v5.2.1 -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap"
+      rel="stylesheet">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+   <style>
+      /* 定義全局變數  */
+      :root {
+         /* 字體 */
+         --font-inter: 'Inter', sans-serif;
+         --font-playfair: 'Playfair Display SC', serif;
+         --font-noto-sans: 'Noto Sans TC', sans-serif;
+         --font-noto-serif: 'Noto Serif TC', serif;
+
+         /* 字體大小 */
+         --fs-h1: 72px;
+         --fs-h2: 60px;
+         --fs-h3: 48px;
+         --fs-h4: 36px;
+         --fs-h5: 24px;
+         --fs-h6: 20px;
+         --fs-h7: 18px;
+         --fs-p: 16px;
+         --fs-des: 14px;
+         --fs-hint: 12px;
+
+         /* 顏色 */
+         --color-primary-dark: #584D4D;
+         --color-primary-medium: #9C9191;
+         --color-primary-light: #E2DEDE;
+         --color-secondary-dark: #322826;
+         --color-secondary-medium: #85645D;
+         --color-secondary-light: #C7A9A3;
+         --color-accent-dark: #8C948C;
+         --color-accent-medium: #712200;
+         --color-text-dark: #322826;
+         --color-text-medium: #5B5B5B;
+         --color-text-light: #FFFDFD;
+         --color-danger: #BD3900;
+      }
+
+      body {
+         /* 被景色、高度 */
+         background-color: var(--color-primary-light);
+         min-height: 100vh;
+
+         /* 防止與內容與header重疊 */
+         padding-top: 80px;
+
+         @media (max-width:1024px) {
+            padding-top: 48px;
+
+         }
+      }
+
+
+      /* header */
+      .header-container {
+         font-family: var(--font-noto-sans);
+         background-color: var(--color-secondary-dark);
+         height: 80px;
+         padding-inline: 100px;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+
+         .logo {
+            color: var(--color-text-light);
+            font-family: var(--font-playfair);
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            user-select: none;
+
+            & a {
+               text-decoration: none;
+               color: inherit;
+            }
+         }
+
+         & ul {
+            color: var(--color-text-light);
+            gap: 32px;
+
+            & .link {
+               height: 28px;
+
+               &:hover {
+                  border-bottom: 2px solid var(--color-primary-medium);
+               }
+            }
+
+            & a {
+               text-decoration: none;
+               color: inherit;
+            }
+
+         }
+
+         .header-icons {
+
+            & img {
+               height: 24px;
+               padding-left: 20px;
+            }
+
+            .menu {
+               display: none;
+            }
+
+         }
+
+         /* RWD */
+         @media (max-width:1024px) {
+            padding-inline: 20px;
+            height: 48px;
+
+            .logo {
+               font-size: 24px;
+            }
+
+            & ul li {
+               display: none;
+            }
+
+            .header-icons {
+
+               & img {
+                  padding-left: 16px;
+                  height: 20px;
+               }
+
+               .account {
+                  display: none;
+               }
+
+               .menu {
+                  display: block;
+               }
+
+               .cart {
+                  margin-bottom: 3px;
+               }
+
+            }
+         }
+
+      }
+
+      /* main */
+      .wrap {
+         padding-inline: 100px;
+         font-family: var(--font-noto-sans);
+
+         .nav-top {
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--color-primary-medium);
+
+            .bread-crumb-pc {
+               margin-block: 40px;
+               color: var(--color-text-medium);
+
+               .prev {
+                  display: none;
+               }
+
+               .current {
+                  color: var(--color-text-dark);
+               }
+
+               & a {
+                  text-decoration: none;
+                  color: inherit;
+               }
+            }
+
+            .cate-btns {
+               gap: 8px;
+
+               .cate-btn {
+                  padding: 4px 12px;
+                  cursor: pointer;
+
+                  &:hover {
+                     border-radius: 4px;
+                     background: var(--color-secondary-dark);
+                     color: var(--color-text-light);
+                  }
+               }
+
+               .current {
+                  border-radius: 4px;
+                  background: var(--color-secondary-dark);
+                  color: var(--color-text-light);
+               }
+            }
+
+            .filter-top {
+               gap: 32px;
+
+               & span {
+                  cursor: pointer;
+               }
+            }
+         }
+
+         /* ------------------頁面內容------------------------ */
+
+
+
+
+
+         @media (max-width:1024px) {
+            padding-inline: 20px;
+
+            /* ----------------------頁面RWD--------------------- */
+
+         }
+      }
+
+      /* footer */
+      .footer-container {
+         background-color: var(--color-secondary-dark);
+         color: var(--color-text-light);
+         padding: 20px 100px;
+
+         .info {
+            .logo {
+               color: var(--color-text-light);
+               font-family: var(--font-playfair);
+               font-size: 40px;
+               font-style: normal;
+               font-weight: 500;
+               line-height: normal;
+
+               & a {
+                  text-decoration: none;
+                  color: inherit;
+               }
+            }
+
+         }
+
+         & .link {
+            .title {
+               margin-bottom: 8px;
+               font-family: var(--font-noto-serif);
+               font-size: 20px;
+               margin-bottom: 12px;
+            }
+
+            & span {
+               font-family: var(--font-noto-sans);
+               margin-bottom: 8px;
+               display: block;
+
+               & a {
+                  text-decoration: none;
+                  color: inherit;
+               }
+            }
+
+         }
+
+
+         @media (max-width:1024px) {
+            padding: 10px 20px 16px 20px;
+            font-size: 12px;
+
+            .info {
+
+               .logo {
+                  font-size: 32px;
+               }
+            }
+
+            .links {
+
+               .title {
+                  font-size: 14px;
+               }
+            }
+
+         }
+      }
+
+
+      .empty-cart-message {
+         color: #000;
+         font: 400 16px Inter, sans-serif;
+         text-align: center;
+         white-space: nowrap;
+
+      }
+
+      .shop-now-button {
+         background-color: var(--secondary-322826, #322826);
+         border-radius: 4px;
+         color: var(--text-color-fffdfd, #fffdfd);
+         font: 400 12px Inter, sans-serif;
+         padding: 8px 16px;
+         display: flex;
+         width: 84px;
+         margin: auto;
+         text-decoration: none;
+      }
+
+      .empty-cart-container {
+         display: flex;
+         flex-direction: column;
+         padding: 0 20px;
+         /* position: absolute; */
+         margin-top: 225px;
+         margin-left: auto;
+         margin-right: auto;
+         margin-bottom: 239px;
+         justify-content: center;
+         align-items: center;
+         left: 50%;
+      }
+   </style>
+</head>
+
+<body class="d-flex flex-column">
+   <!-- header -->
+   <header>
+      <div class="header-container fixed-top">
+         <div class="logo">
+            <a href="">ELEGANZA</a>
+         </div>
+         <ul class="d-flex justify-content-between align-content-center list-unstyled m-0">
+            <li class="link"><a href="">關於阿爾扎</a></li>
+            <li class="link"><a href="">商品總覽</a></li>
+            <li class="link"><a href="">精選課程</a></li>
+            <li class="link"><a href="">師資陣容</a></li>
+            <li class="link"><a href="">弦樂專欄</a></li>
+         </ul>
+         <div class="header-icons d-flex align-items-center justify-content-between">
+            <a href=""><img class="cart" src="./icons/icon-cart-white.svg" /></a>
+            <a href=""><img class="account" src="./icons/icon-user-white.svg" /></a>
+            <a href=""><img class="menu" src="./icons/icon-menu-white.svg" /></a>
+         </div>
+      </div>
+   </header>
+
+   <!-- main -->
+   <main class="wrap flex-grow-1">
+      <!-- ------------------頁面內容------------------------ -->
+      <div class="empty-cart-container">
+         <section>
+            <p class="empty-cart-message">您的購物車中沒有任何商品</p>
+            <a href="/shop" class="shop-now-button">前往購物</a>
+         </section>
+      </div>
+
+
+   </main>
+
+   <!-- footer -->
+   <footer>
+      <div class="footer-container">
+         <div class="row justify-content-between">
+            <div class="info col-xl-4">
+               <div class="logo">ELEGANZA</div>
+               <p>Eleganza Violin Studio 是一家提供小提琴及其配件產品、小提琴課程、音樂會場地和日常練習場地，以及音樂推廣講座的小提琴音樂工作室。 </p>
+               <hr class="d-block d-xl-none">
+            </div>
+            <div class="links row col-xl-7 justify-content-between">
+               <div class="col">
+                  <div class="row justify-content-between">
+                     <div class="link col-sm mb-2">
+                        <span class="title">產品販售</span>
+                        <span><a href="">小提琴</a></span>
+                        <span><a href="">琴盒/弓</a></span>
+                        <span><a href="">配件</a></span>
+                     </div>
+                     <div class="link col-sm  mb-2">
+                        <span class="title">小提琴課程</span>
+                        <span><a href="">各級個別課</a></span>
+                        <span><a href="">團體課</a></span>
+                        <span><a href="">大師班</a></span>
+                     </div>
+                  </div>
+               </div>
+               <div class="col">
+                  <div class="row justify-content-between">
+                     <div class="link col-sm  mb-2">
+                        <span class="title">聯繫方式</span>
+                        <span>
+                           <img src="./icons/icon-mail-white.svg" />
+                           eleganza@gmail.com
+                        </span>
+                        <span>
+                           <img src="./icons/icon-phone-white.svg" />
+                           +886229961786
+                        </span>
+                        <span>
+                           <a href="">
+                              <img src="./icons/icon-message-white.svg" />
+                              表單聯繫我們
+                           </a>
+                        </span>
+                     </div>
+                     <div class="link col-sm  mb-2">
+                        <span class="title">營業時間</span>
+                        <span>週一至週五 13:00-22:00</span>
+                        <span>週六 9:00-21:30</span>
+                        <span>241 新北市三重區慈愛街18號</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <hr class="mt-0">
+         <div class="text-center">
+            Copyright 2024© Eleganza Studio | All rights reserved
+         </div>
+      </div>
+   </footer>
+</body>
+
+</html>

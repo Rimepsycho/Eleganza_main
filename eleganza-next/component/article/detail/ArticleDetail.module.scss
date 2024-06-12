@@ -1,0 +1,35 @@
+.article-detail {
+  // border: 1px solid #ccc;
+  padding: 20px;
+  // display:block;
+  // background-color: #fff;
+  
+
+  .article-header {
+    .article-title {
+      font-size: 24px;
+      margin-bottom: 10px;
+      width: 810px;
+    }
+
+    .article-date {
+      font-size: 14px;
+      color: #666;
+    }
+  }
+
+  .article-body {
+    .article-image {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    .article-content {
+      font-size: var(--fs-p);
+      line-height: 1.6;
+      width: 810px;
+      
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.bread-crumb {
+  margin-block: 40px;
+  color: var(--color-text-medium);
+
+  .current {
+    color: var(--color-text-dark);
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+@media (max-width: 992px) {
+   .bread-crumb {
+     font-size: 12px;
+    margin-block: 20px;
+  }
+}

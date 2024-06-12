@@ -1,0 +1,51 @@
+.sort-container {
+  position: relative;
+  display: inline-block;
+
+  .sort-button {
+    all: unset;
+    cursor: pointer;
+    display: flex; // 確保按鈕內容水平排列
+    align-items: center; // 垂直居中對齊
+    padding: 5px 10px; // 增加一點內間距，讓點擊區域更大
+    background: none;
+    border: none;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    min-width: 100%; // 與按鈕寬度一致
+    list-style-type: none; 
+    font-size: 14px;
+    background-color: #ffffff;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: .25rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); // 添加陰影效果增強視覺層次
+
+  }
+
+  .dropdown-item {
+    width: 100%;
+    padding: 8px 16px; // 增加適當的內間距使選項易於點擊
+    color: var(--color-primary-dark);
+    text-align: center;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    &:hover {
+      background-color: #f8f9fa;
+    }
+  }
+}
+
+
+
+  @media screen and (max-width: 375px) {
+    .sort-container {
+      display: none;
+    }
+  }

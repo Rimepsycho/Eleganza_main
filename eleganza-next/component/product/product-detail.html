@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+   <title>Detail</title>
+   <!-- Required meta tags -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+   <!-- Bootstrap CSS v5.2.1 -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap"
+      rel="stylesheet">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+   <style>
+      /* 定義全局變數  */
+      :root {
+         /* 字體 */
+         --font-inter: 'Inter', sans-serif;
+         --font-playfair: 'Playfair Display SC', serif;
+         --font-noto-sans: 'Noto Sans TC', sans-serif;
+         --font-noto-serif: 'Noto Serif TC', serif;
+
+         /* 字體大小 */
+         --fs-h1: 72px;
+         --fs-h2: 60px;
+         --fs-h3: 48px;
+         --fs-h4: 36px;
+         --fs-h5: 24px;
+         --fs-h6: 20px;
+         --fs-h7: 18px;
+         --fs-p: 16px;
+         --fs-des: 14px;
+         --fs-hint: 12px;
+
+         /* 顏色 */
+         --color-primary-dark: #584D4D;
+         --color-primary-medium: #9C9191;
+         --color-primary-light: #E2DEDE;
+         --color-secondary-dark: #322826;
+         --color-secondary-medium: #85645D;
+         --color-secondary-light: #C7A9A3;
+         --color-accent-dark: #8C948C;
+         --color-accent-medium: #712200;
+         --color-text-dark: #322826;
+         --color-text-medium: #5B5B5B;
+         --color-text-light: #FFFDFD;
+         --color-danger: #BD3900;
+      }
+
+      body {
+         font-family: var(--font-inter), var(--font-noto-sans), var(--font-noto-serif);
+         /* 被景色、高度 */
+         background-color: var(--color-primary-light);
+         min-height: 100vh;
+
+
+         /* 防止與內容與header重疊 */
+         padding-top: 80px;
+
+         @media (max-width:1024px) {
+            padding-top: 48px;
+
+         }
+      }
+
+      .obj-fit {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+
+      ul {
+         padding: 0;
+         margin: 0;
+         list-style: none;
+      }
+
+
+      /* main */
+      main {
+         /* padding-inline: 300px; */
+
+
+         /* ------------------上方篩選------------------------ */
+         .nav-top {
+            /* padding-bottom: 20px; */
+
+            .bread-crumb {
+               margin-block: 40px;
+               color: var(--color-text-medium);
+
+               .current {
+                  color: var(--color-text-dark);
+               }
+
+               & a {
+                  text-decoration: none;
+                  color: inherit;
+               }
+            }
+         }
+
+         .product {
+            background-color: var(--color-text-light);
+            border-radius: 8px;
+            /* drop shadow */
+            box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+
+            .info {
+               border-top: 0.5px solid var(--stroke, #9C9191);
+            }
+         }
+
+         .product-pic {
+            padding: 20px;
+            background: #FFF;
+            border-radius: 8px;
+         }
+
+         .preview {
+            & .arrow {
+               width: 20px;
+            }
+
+            .current {
+               border-radius: 4px;
+               border: 1px solid var(--color-primary-medium);
+               background: var(#FFFDFD);
+            }
+
+            & img {
+               border-radius: 4px;
+            }
+
+            & div {
+               width: 100%;
+
+               & img {
+                  width: 100%;
+               }
+            }
+
+         }
+
+         .product-info {
+            .brand {
+               font-size: 20px;
+            }
+
+            .product-name {
+               font-size: 36px;
+               line-height: normal;
+            }
+
+            .rating {
+               font-size: 12px;
+            }
+
+            .price {
+               font-size: 24px;
+               margin-block: 40px;
+            }
+
+            .num {
+               margin-inline: 40px;
+
+               .num-area {
+                  margin-inline: 20px;
+                  padding: 12px 16px;
+                  border-radius: 4px;
+                  border: 0.5px solid var(--color-primary-medium);
+               }
+            }
+
+            button {
+               color: var(--color-text-light);
+               border: none;
+               border-radius: 4px;
+               padding: 12px 16px;
+               background: var(--color-secondary-dark);
+            }
+         }
+
+         .product-detail {
+            margin-bottom: 60px;
+
+            & span {
+               display: block;
+               font-size: 24px;
+               margin-bottom: 16px;
+            }
+
+            width: 50%;
+         }
+
+         .product-recommend {
+            padding-bottom: 20px;
+
+            .also {
+               font-size: 24px;
+               margin-bottom: 20px;
+            }
+
+            .product-list {
+               gap: 40px;
+               overflow-x: auto;
+               padding-bottom: 20px;
+
+               &::-webkit-scrollbar {
+
+                  height: 3px;
+                  background-color: var(--color-primary-medium);
+                  border-radius: 4px;
+               }
+
+               &::-webkit-scrollbar-thumb {
+                  background-color: var(--color-secondary-dark);
+                  border-radius: 10px;
+                  /* 滑塊圓角 */
+               }
+
+               /* position: absolute; */
+               .product {
+                  min-width: 158px;
+               }
+            }
+         }
+
+         @media (max-width: 992px) {
+            padding-inline: 20px;
+            font-size: 12px;
+
+            /* ----------------------頁面RWD--------------------- */
+            .nav-top {
+               font-size: 12px;
+
+               .bread-crumb {
+                  margin-block: 20px;
+               }
+
+               .filter-top {
+                  gap: 32px;
+               }
+            }
+
+            .product-info {
+               margin-top: 20px;
+
+               .brand {
+                  font-size: 12px;
+               }
+
+               .product-name {
+                  font-size: 16px;
+                  font-style: normal;
+                  font-weight: 600;
+               }
+
+               .price {
+                  font-size: 16px;
+                  margin-block: 16px;
+               }
+
+               button {
+                  padding: 10px 8px;
+               }
+            }
+
+            .product-detail {
+               & span {
+                  font-size: 16px;
+               }
+
+               margin-bottom: 0;
+            }
+
+            .product-recommend {
+               .also {
+                  font-size: 16px;
+               }
+
+               .product-list {
+                  gap: 20px;
+               }
+            }
+         }
+
+         @media (max-width:768px) {
+
+            .product-detail {
+               width: 100%;
+            }
+         }
+      }
+   </style>
+</head>
+
+<body class="d-flex flex-column">
+   <!-- main -->
+   <main class="flex-grow-1">
+      <div class="container">
+
+         <!-------------------- 頁面內容 -------------------------->
+         <div class="nav-top">
+            <div class="bread-crumb">
+               <div class="bread-crumb-pc d-none d-md-block">
+                  <span><a href="">首頁</a></span>
+                  <span>/</span>
+                  <span class="current"><a href="">目錄</a></span>
+               </div>
+               <div class="bread-crumb-m d-block d-md-none">
+                  <div class="d-flex justify-content-between align-items-center">
+                     <a><img class="mb-1" src="/public/icons/icon-chevron-left.svg" alt="">上一頁</a>
+                     <!-- <span><img class="mb-1" src="/public/icons/icon-search.svg" alt=""></span> -->
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!--------------------- 商品詳細 ------------------------->
+         <div class="row justify-content-between mb-0 mb-md-5">
+            <div class="col-12 col-md-6">
+               <div class="row">
+                  <div class="col-10">
+                     <div class="product-pic">
+                        <img class="obj-fit" src="/public/pic/111069.jpg" alt="">
+                     </div>
+                  </div>
+                  <div class="col-2">
+                     <div class="preview d-flex flex-column h-100 justify-content-between align-items-center">
+                        <div class="arrow text-center">
+                           <img src="/public/icons/icon-chevron-up.svg" alt="">
+                        </div>
+                        <div>
+                           <img class="current" src="/public/pic/111069.jpg" alt="">
+                        </div>
+                        <div>
+                           <img src="/public/pic/111069.jpg" alt="">
+                        </div>
+                        <div>
+                           <img src="/public/pic/111069.jpg" alt="">
+                        </div>
+                        <div>
+                           <img src="/public/pic/111069.jpg" alt="">
+                        </div>
+                        <div>
+                           <img src="/public/pic/111069.jpg" alt="">
+                        </div>
+                        <div class="arrow">
+                           <img src="/public/icons/icon-chevron-down.svg" alt="">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-12 col-md-5">
+               <!-- ------------ 商品資訊  ---------------- -->
+               <div class="product-info">
+                  <div class="brand mb-1">Conrad Götz</div>
+                  <div class="product-name mb-1">Heritage Cantonate 136 Violin</div>
+                  <div class="d-flex align-items-center rating">
+                     <img src="/public/icons/icon-star-solid.svg" alt="">
+                     <img src="/public/icons/icon-star-solid.svg" alt="">
+                     <img src="/public/icons/icon-star-solid.svg" alt="">
+                     <img src="/public/icons/icon-star-solid.svg" alt="">
+                     <img src="/public/icons/icon-star-solid.svg" alt="">
+                     <span class="ms-1 mt-1">
+                        4.3(24)
+                     </span>
+                  </div>
+                  <div class="price">$8,5000</div>
+                  <div class="d-flex justify-content-between">
+                     <img src="/public/icons/icon-like.svg" alt="">
+                     <div class="d-flex num">
+                        <img src="/public/icons/icon-minus.svg" alt="">
+                        <div class="num-area">1</div>
+                        <img src="/public/icons/icon-plus.svg" alt="">
+                     </div>
+                     <button class="flex-grow-1">加入購物車</button>
+                  </div>
+               </div>
+               <hr class="d-block d-md-none">
+            </div>
+         </div>
+         <div class="product-detail">
+            <span>商品細項</span>
+            <p>尺寸:
+               4/4 高級樂器 底部、琴頸和側板由歐洲楓木製成 頂板由歐洲雲杉製成 頂板上有非常細緻的年輪 背板上有極其細緻的火焰紋路 優化的頂部和底部音色 精心製作的表面拓撲，包括F孔和周圍表面 琴頸、側板和滾頭的火焰與整個樂器的外觀和諧 琴頸、側板、滾頭和鑲嵌都經過精心的完工，細節入微 黃楊木弦軸、黃楊木尾板和黃楊木下巴托（Guarneri樣式，配有鈦螺絲） E弦的鍍金微調器 原始Götz琴橋 Thomastik
+               Dominant琴弦 由第二位製琴師對整體外觀進行翻新</p>
+         </div>
+         <hr class="d-block d-md-none">
+         <div>
+            <div class="product-recommend">
+               <div class="d-flex justify-content-between">
+                  <span class="also">
+                     你可能也喜歡
+                  </span>
+               </div>
+               <div class="d-flex product-list">
+                  <div class="col">
+                     <div class="product">
+                        <div class="d-flex flex-column w-100">
+                           <div class="p-3">
+                              <img class="obj-fit" src="/public/icons/icon-mail.svg" alt="">
+                           </div>
+                           <div class="info py-2 px-3">
+                              <div class="mb-2 mb-sm-3">
+                                 <div>Höfner</div>
+                                 <div>Allegro 3/4 Violin Outfit</div>
+                              </div>
+                              <div class="d-flex justify-content-between">
+                                 $8,5000
+                                 <div class="d-flex justify-content-between">
+                                    <img class="pe-2" src="/public/icons/icon-like.svg" alt=""><img
+                                       src="/public/icons/icon-cart.svg" alt="">
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col">
+                     <div class="product">
+                        <div class="d-flex flex-column w-100">
+                           <div class="p-3">
+                              <img class="obj-fit" src="/public/icons/icon-mail.svg" alt="">
+                           </div>
+                           <div class="info py-2 px-3">
+                              <div class="mb-2 mb-sm-3">
+                                 <div>Höfner</div>
+                                 <div>Allegro 3/4 Violin Outfit</div>
+                              </div>
+                              <div class="d-flex justify-content-between">
+                                 $8,5000
+                                 <div class="d-flex justify-content-between">
+                                    <img class="pe-2" src="/public/icons/icon-like.svg" alt=""><img
+                                       src="/public/icons/icon-cart.svg" alt="">
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col">
+                     <div class="product">
+                        <div class="d-flex flex-column w-100">
+                           <div class="p-3">
+                              <img class="obj-fit" src="/public/icons/icon-mail.svg" alt="">
+                           </div>
+                           <div class="info py-2 px-3">
+                              <div class="mb-2 mb-sm-3">
+                                 <div>Höfner</div>
+                                 <div>Allegro 3/4 Violin Outfit</div>
+                              </div>
+                              <div class="d-flex justify-content-between">
+                                 $8,5000
+                                 <div class="d-flex justify-content-between">
+                                    <img class="pe-2" src="/public/icons/icon-like.svg" alt=""><img
+                                       src="/public/icons/icon-cart.svg" alt="">
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col">
+                     <div class="product">
+                        <div class="d-flex flex-column w-100">
+                           <div class="p-3">
+                              <img class="obj-fit" src="/public/icons/icon-mail.svg" alt="">
+                           </div>
+                           <div class="info py-2 px-3">
+                              <div class="mb-2 mb-sm-3">
+                                 <div>Höfner</div>
+                                 <div>Allegro 3/4 Violin Outfit</div>
+                              </div>
+                              <div class="d-flex justify-content-between">
+                                 $8,5000
+                                 <div class="d-flex justify-content-between">
+                                    <img class="pe-2" src="/public/icons/icon-like.svg" alt=""><img
+                                       src="/public/icons/icon-cart.svg" alt="">
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col">
+                     <div class="product">
+                        <div class="d-flex flex-column w-100">
+                           <div class="p-3">
+                              <img class="obj-fit" src="/public/icons/icon-mail.svg" alt="">
+                           </div>
+                           <div class="info py-2 px-3">
+                              <div class="mb-2 mb-sm-3">
+                                 <div>Höfner</div>
+                                 <div>Allegro 3/4 Violin Outfit</div>
+                              </div>
+                              <div class="d-flex justify-content-between">
+                                 $8,5000
+                                 <div class="d-flex justify-content-between">
+                                    <img class="pe-2" src="/public/icons/icon-like.svg" alt=""><img
+                                       src="/public/icons/icon-cart.svg" alt="">
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </main>
+
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"></script>
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"></script>
+</body>

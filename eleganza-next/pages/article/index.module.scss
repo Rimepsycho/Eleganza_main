@@ -1,0 +1,12 @@
+.cards-container {
+  display: grid; // 默認為網格佈局
+  grid-template-columns: repeat(3, 1fr); // 三列
+  grid-gap: 40px; // 卡片之間的間距
+  margin-top: 40px; // 與上一個元素的間距
+
+  @media screen and (max-width: 375px) {
+    display: flex; // 小螢幕上改為彈性容器
+    flex-direction: column; // 卡片按列排列
+    gap: 16px; // 卡片間距
+  }
+}

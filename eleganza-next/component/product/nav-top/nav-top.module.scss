@@ -1,0 +1,73 @@
+.nav-top {
+  .cate-btns {
+    gap: 8px;
+
+    .cate-btn {
+      padding: 4px 12px;
+      cursor: pointer;
+      user-select: none;
+
+      &:hover {
+        border-radius: 4px;
+        background: var(--color-secondary-dark);
+        color: var(--color-text-light);
+      }
+    }
+
+    & .current {
+      border-radius: 4px;
+      background: var(--color-secondary-dark);
+      color: var(--color-text-light);
+    }
+  }
+
+  .filter-top {
+    gap: 32px;
+
+    span {
+      cursor: pointer;
+      user-select: none;
+
+    }
+  }
+  hr {
+    margin-block: 20px 40px;
+  }
+
+  @media (max-width: 992px) {
+    /* ----------------------頁面RWD--------------------- */
+    font-size: 12px;
+    margin-bottom: 0;
+
+    .bread-crumb {
+      margin-block: 20px;
+    }
+
+    .filter-top {
+      gap: 32px;
+    }
+    hr {
+      margin-block: 16px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .cate-btns {
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      gap: 0;
+      flex-grow: 1;
+      overflow-x: auto;
+
+      div {
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+.filter-left {
+  font-size: 16px; // 設定字體大小為16像素
+}

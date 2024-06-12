@@ -1,0 +1,46 @@
+@import 'react-datepicker/dist/react-datepicker.css';
+
+.reactDatepicker {
+  position: relative;
+  border: 2px;
+}
+
+.reactDatepicker .react-datepicker {
+  border: 1px solid #3b9fa1 !important; /* 自定义边框样式 */
+  border-radius: 5px !important; /* 自定义边框圆角 */
+}
+
+.reactDatepicker > div > div > div > div > .react-datepicker__header {
+  background-color: #322826 !important; /* 自定义标题背景颜色 */
+}
+
+.reactDatepicker .react-datepicker__current-month,
+.reactDatepicker .react-datepicker-time__header,
+.reactDatepicker .react-datepicker-year-header {
+  color: #26322a !important; /* 自定义标题文字颜色 */
+}
+
+.reactDatepicker .react-datepicker__day-name,
+.reactDatepicker .react-datepicker__day,
+.reactDatepicker .react-datepicker__time-name {
+  color: #322826 !important; /* 自定义日期文字颜色 */
+}
+
+.reactDatepicker .react-datepicker__day--selected,
+.reactDatepicker .react-datepicker__day--in-selecting-range,
+.reactDatepicker .react-datepicker__day--in-range {
+  background-color: #dd4729 !important; /* 自定义选中日期背景颜色 */
+  color: #fff !important; /* 自定义选中日期文字颜色 */
+}
+
+.reactDatepicker .react-datepicker__day--keyboard-selected {
+  background-color: #322826 !important; /* 自定义键盘选中日期背景颜色 */
+  color: #fff !important; /* 自定义键盘选中日期文字颜色 */
+}
+
+/* 自定义日期按钮的悬停和焦点样式 */
+.reactDatepicker .react-datepicker__day:hover,
+.reactDatepicker .react-datepicker__day:focus {
+  background-color: #63e41e !important; /* 自定义悬停背景颜色 */
+  color: #fff !important; /* 自定义悬停文字颜色 */
+}

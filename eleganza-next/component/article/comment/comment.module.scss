@@ -1,0 +1,103 @@
+/* 文章評論 */
+.article-comment {
+  h4 {
+    margin: 14px 0;
+    color: var(--color-text-dark);
+    font-family: var(--font-inter);
+    font-size: var(--fs-h5);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  button {
+    padding: 4px 12px;
+    border-radius: 4px;
+    background-color: var(--color-secondary-dark);
+    color: var(--color-text-light);
+    margin: auto 0;
+  }
+}
+
+.comment-section {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  margin-bottom: 20px;
+  border-top: 0.5px solid var(--color-primary-medium);
+}
+
+.user-avatar {
+  margin-right: 15px;
+  width: 66px;
+  height: 66px;
+
+  &img {
+    width: 100%;
+  }
+}
+
+.user-name-and-rating {
+  display: grid;
+  margin-bottom: 5px;
+}
+
+.user-name {
+  color: var(--color-secondary-dark);
+  font-family: var(--font-inter);
+  font-size: var(--fs-h5);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.comment-stars img {
+  margin-right: 2px;
+}
+
+.icon-more {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+//評論按鈕
+.comment-button {
+  display: flex;
+  height: 40px;
+  padding: 12px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-color-fffdfd, #fffdfd);
+  border-radius: 6px;
+  background: var(--secondary-322826, #322826);
+  font-family: 'Noto Sans';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 42px;
+}
+
+.button-form{
+  border: none;
+  padding: 8px 8px;
+  gap: 10px;
+  margin: 10px 5px;
+  color: var(--text-color-fffdfd, #fffdfd);
+  border-radius: 6px;
+  background: var(--secondary-322826, #322826);
+}
+
+.form-word {
+  align-items: center;
+  justify-content: center;
+  margin: 5px 0;
+}

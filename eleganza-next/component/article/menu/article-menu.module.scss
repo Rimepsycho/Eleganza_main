@@ -1,0 +1,113 @@
+/* 選單*/
+.menu-articles {
+  display: flex;
+  justify-content: flex-start;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  .sort {
+    background: none;  
+    border: none;     
+    padding: 0;        
+    margin: 0;         
+    }
+}
+
+/* 單個文章選項樣式 */
+.menu-article {
+  padding: 4px 12px;
+  margin-right:8px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  background-color: var(--color-primary-light);
+  color: var(--color-text-dark);
+  font-family: var(--font-noto-sans); // 假設所有選項使用相同字體
+
+  button {
+    all: unset;
+    &:hover {
+      background-color: var(--color-secondary-dark);
+      color: var(--color-text-light);
+    }
+  }
+
+  a {
+    border-radius: 4px;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &:hover {
+    background-color: var(--color-secondary-dark);
+    color: var(--color-text-light);
+  }
+}
+
+
+/* RWD選單 */
+@media screen and (max-width: 375px) {
+  .menu-articles {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    list-style: none;
+    background-color: #fffdfd;
+    overflow-x: scroll;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .menu-article {
+    width: 100%;
+    padding: 4px 10px;
+    border-radius: 4px;
+    text-wrap: nowrap;
+    border-radius: 0;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--color-text-light);
+
+    a {
+      font-family: var(--font-noto-sans);
+      text-decoration: none;
+      color: inherit;
+    }
+
+    &:hover {
+      border-radius: 4px;
+      color: inherit;
+      background-color: var(--color-primary-dark);
+      color: var(--color-text-light);
+    }
+  }
+
+}
+
+/* 搜尋和排序 */
+.article-search {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  margin-left: auto;
+  color: var(--color-text-dark);
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    align-items: center;
+    font-family: var(--font-noto-sans);
+  }
+}
+
+.current {
+   border-radius: 4px;
+   background: var(--color-secondary-dark);
+   color: var(--color-text-light);
+ }
+
+
+

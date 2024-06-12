@@ -1,0 +1,52 @@
+.breadcrumb {
+    list-style: none;
+    padding: 0;
+    margin: 40px 0px;
+    /*test*/
+    display: flex;
+    align-items: center;
+    font-family: var(--font-noto-sans);
+    font-size: var(--fs-p);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    .breadcrumb-item {
+        text-decoration: none;
+
+        & a {
+            color: var(--color-text-dark);
+            text-decoration: none;
+        }
+    }
+
+    .back-button {
+        display: none;
+        text-decoration: none;
+        color: #322826;
+        border:none;
+        background-color:rgba(156, 145, 145, 0);
+    }
+}
+
+/* RWD 麵包屑 */
+@media screen and (max-width: 375px) {
+    .breadcrumb {
+        margin: 20px 0;
+    }
+
+    .breadcrumb-item a {
+        display: none;
+    }
+
+    /* 這個是隱藏BS自帶麵包屑的/線 */
+    .breadcrumb-item::before {
+        display: none;
+    }
+
+    .breadcrumb .back-button {
+        display: inline-block;
+        font-family: var(--font-noto-sans);
+        /* 顯示按鈕 */
+    }
+}

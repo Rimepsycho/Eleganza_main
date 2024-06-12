@@ -1,0 +1,25 @@
+.pagination {
+  margin-block: 40px 60px;
+  gap: 10px;
+  user-select: none;
+  cursor: pointer;
+
+  .pages {
+    gap: 10px;
+
+    .link {
+      padding: 4px 12px;
+
+      &:hover {
+        border-radius: 4px;
+        background: var(--color-secondary-dark);
+        color: var(--color-text-light);
+      }
+    }
+    .current {
+      border-radius: 4px;
+      background: var(--color-secondary-dark);
+      color: var(--color-text-light);
+    }
+  }
+}

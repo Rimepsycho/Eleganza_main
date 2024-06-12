@@ -1,0 +1,162 @@
+
+.list-unstyled{
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+
+.sidenav-mobile{
+    display: none;
+    } 
+    @media (max-width:1024px) {
+    .sidenav-mobile{
+       background-color: var(--color-text-light);
+       border-radius: 8px;
+       box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+       width: 100%; /* 讓 .sidenav 佔滿整個畫面寬度 */
+       align-items: center; /* 將內容置中顯示 */
+       padding: 20px; /* 調整 padding 以保持內容的間距 */
+       /* margin-inline: 20px; */
+       display: flex;
+       flex-direction: column;
+       align-items: flex-start;
+       gap: 0;
+       margin-bottom: 48px;
+
+       & ul{
+       display: flex;
+       min-width: 100%; 
+       flex-direction: column;
+       justify-content: space-between;
+       /* align-items: flex-start; */
+       gap: 20px;
+       .sidenavsub-mobile{
+         display: flex;
+         flex-direction: column;
+         align-items: flex-start;
+         gap: 4px;
+         margin-top: 8px;
+         margin-bottom: -10px;
+         color: var(--color-text-medium);
+         font-size: var(--fs-hint);
+      }
+         & ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+         }
+      .sidenavsub-mobile li.current a{
+         color: var(--color-secondary-medium);
+      }
+      .sidenavsub-mobile a{
+         color: var(--color-text-medium);
+      }
+      .sidenavsub-mobile a:hover{
+         color: var(--color-primary-dark);
+      }
+    }
+    
+    .accountname{
+       padding: 0 0 20px 0;
+       /* border-bottom: 0.5px solid var(--color-primary-medium); */
+    }
+
+    .accountform-mobile{
+       margin-top: -20px;
+    }
+    .accountform-mobile li {
+       /* display: flex;
+       justify-content: space-between;
+       align-items: center; 可选，垂直居中对齐 */
+    }
+       & a{
+          display: flex;
+          justify-content: space-between;
+          text-decoration: none;
+          color: var(--color-secondary-dark);
+          
+       }
+       & a:hover {
+          color: var(--color-primary-dark);
+       }
+          .sidenavselected{
+             color: var(--color-secondary-medium);
+          }
+          .sidenavlogout{
+             color: var(--color-danger);
+          }
+       }
+    }
+
+.sidenav-desktop{
+    background-color: var(--color-text-light);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+   //  margin-right: 40px;
+
+    & ul{
+       display: flex;
+       min-width: 240px; 
+       flex-direction: column;
+       align-items: flex-start;
+       gap: 20px;
+    }
+    .sidenavsub-desktop{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      margin-top: 10px;
+      color: var(--color-text-medium);
+      font-size: var(--fs-hint);
+   }
+      & ul{
+         list-style: none;
+         margin: 0;
+         padding: 0;
+      }
+   .sidenavsub-desktop li.current a{
+      color: var(--color-secondary-medium);
+   }
+   .sidenavsub-desktop a{
+      color: var(--color-text-medium);
+   }
+   .sidenavsub-desktop a:hover{
+      color: var(--color-primary-dark);
+   }
+    
+    .accountname{
+       padding: 0 0 0 0;
+       border-bottom: 0.5px solid var(--color-primary-medium);
+    }
+
+    .accountform{
+       margin-top: -20px;
+    }
+       & a{
+          text-decoration: none;
+          color: var(--color-secondary-dark);
+          
+       }
+       & a:hover {
+          color: var(--color-primary-dark);
+       }
+          .sidenavselected{
+             color: var(--color-secondary-medium);
+          }
+          .sidenavlogout{
+             color: var(--color-danger);
+          }
+ }
+ @media (max-width:1024px) {
+    .sidenav-desktop{
+       display: none !important;     
+       }
+ }
+

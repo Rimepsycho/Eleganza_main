@@ -1,0 +1,36 @@
+.product-detail {
+  p {
+    margin-bottom: 60px;
+  }
+  width: 50%;
+  margin-bottom: 0;
+
+  & span {
+    display: block;
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  & p {
+    line-height: 1.8rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .product-detail {
+    & span {
+      font-size: 16px;
+    }
+    & p {
+      font-size: 14px;
+      line-height: 1.5rem;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .product-detail {
+    width: 100%;
+  }
+}

@@ -1,0 +1,34 @@
+.container {
+  padding: 20px;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  img {
+    margin-right: 5px;
+  }
+}
+
+.course-details-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.comments-container {
+  margin-top: 40px;
+}
+
+.separator {
+  width: 100%;
+  height: 1px;
+  background-color: #9c9191;
+  margin: 10px 0;
+}

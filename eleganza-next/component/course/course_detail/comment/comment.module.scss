@@ -1,0 +1,47 @@
+.course-comments {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  // max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .course-comments-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .comments-card {
+      display: flex;
+      align-items: center; // 垂直居中對齊
+      gap: 10px;
+
+      img {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+      }
+
+      p {
+        margin: 0;
+        margin-top: 40px; // 與邊框的上邊距
+        margin-bottom: 40px; // 與邊框的下邊距
+      }
+
+      .stars-container {
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 20px;
+          height: 20px;
+          margin-right: 3px;
+        }
+      }
+
+      .comment-short {
+        margin-top: 5px;
+      }
+    }
+  }
+}

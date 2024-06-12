@@ -1,0 +1,19 @@
+.on {
+  /* 利用CSS的變數來套用動態的color屬性 */
+  color:var(--on-color);
+}
+
+.off {
+  color: gray;
+}
+
+.good-style{
+  color:red;
+}
+
+.star-btn{
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}

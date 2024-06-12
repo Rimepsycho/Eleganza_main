@@ -1,0 +1,87 @@
+/* Schedule.module.css */
+.schedule {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+  }
+  
+  .weekNavigation {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .weekNavigation button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .weekNavigation span {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  .weekGrid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    width: 100%;
+  }
+  
+  .dayColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: #fffdfd;
+    border-radius: 5px;
+  }
+  
+  .dayHeader {
+    font-weight: bold;
+    font-size: 1em;
+    margin-bottom: 10px;
+  }
+  
+  .timeSlot {
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    background-color: #e0e0e0;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 0.9em;
+    cursor: pointer;
+  }
+  
+  .timeSlot:hover {
+    background-color: #d0d0d0;
+  }
+  
+  .disabled {
+    background-color: #f0f0f0;
+    color: #ccc;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .selected {
+    background-color: #9C9191; /* 选中的时间段颜色 */
+    color: #fff;
+  }
+  

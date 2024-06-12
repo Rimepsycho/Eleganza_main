@@ -1,0 +1,79 @@
+.mainarea-desktop-mylesson{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* 自动换行 */
+    align-items: flex-start;
+    width: 100%; /* 占满父容器的宽度 */
+    flex: 1 0 0;
+    gap: 20px;
+    @media (max-width:1024px) {
+       display: none;
+    }
+ }
+
+ .lesson-mobile{
+   display: none; 
+}
+   @media (max-width:1024px) {
+      .lesson-mobile{
+         display: flex;
+         flex-direction: column;
+         gap:0;
+         background-color: var(--color-text-light);
+         width: 100%;
+         border-radius: 8px;
+         /* margin-inline: 20px; */
+         padding: 0 0 12px 0;
+      }
+         .btn-mobile{
+         width: 100%;
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         align-items: center;
+         padding: 12px 10px;
+         gap: auto;
+         background-color: var(--color-text-light);
+         border-radius: 8px 8px 0px 0px;
+         border-bottom: 0.5px solid var(--stroke, #9C9191);
+      }
+      .sbtn{
+         display: flex;
+         padding: 4px 12px;
+         justify-content: center;
+         align-items: center;
+         /* gap: 10px; */
+         flex: 1 0 0;
+         border-radius: 4px;
+      }
+         & a{
+            color: var(--color-text-medium);
+         }
+      .sbtn-selected{
+         background-color: var(--color-secondary-dark);
+         display: flex;
+         padding: 4px 12px;
+         justify-content: center;
+         align-items: center;
+         /* gap: 10px; */
+         flex: 1 0 0;
+         border-radius: 4px;
+         & a{
+            color: var(--color-text-light);
+         }
+      }
+   }
+
+   .mainarea-desktop-collection{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap; /* 自动换行 */
+      align-items: flex-start;
+      width: 100%; /* 占满父容器的宽度 */
+      flex: 1 0 0;
+      gap: 40px;
+      @media (max-width:1024px) {
+         display: none;
+      }
+   }
+   

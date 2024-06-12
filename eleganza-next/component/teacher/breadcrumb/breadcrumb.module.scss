@@ -1,0 +1,59 @@
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  list-style-type: none;
+  padding: 0;
+
+  a {
+    text-decoration: none;
+    color: var(--color-text-dark);
+  }
+
+  .chevron-left,
+  .prev,
+  .search {
+    display: inline-flex; // 使用 inline-flex 保持元素在同一行
+  }
+
+  .search {
+    margin-left: auto; // 自動將搜索欄推到右邊
+  }
+
+  .separator {
+    margin: 0 8px; // 分隔符號的邊距
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .breadcrumb {
+    margin-top: 20px;
+
+    a,
+    p {
+      display: none; // 小屏幕上隱藏鏈接和段落
+    }
+
+    .chevron-left,
+    .prev,
+    .search {
+      display: inline-flex;
+    }
+
+    .search {
+      margin-left: auto;
+    }
+  }
+}
+
+@media screen and (min-width: 376px) {
+  .breadcrumb .chevron-left,
+  .breadcrumb .prev,
+  .breadcrumb .search,
+  .Filter,
+  .sort {
+    display: none; // 大屏幕上隱藏某些元素
+  }
+}

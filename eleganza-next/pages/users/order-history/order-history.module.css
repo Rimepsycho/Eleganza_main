@@ -1,0 +1,74 @@
+.mainarea-desktop-collection{
+    background: var(--color-text-light);
+    border-radius: 8px;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; /* 自动换行 */
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%; /* 占满父容器的宽度 */
+    height: auto; /* 根据内容自动调整高度 */
+    min-height: 400px; /* 设置最小高度 */
+    flex: 1 0 0; /* 占满父容器的宽度不超過 */
+    /* gap: 18px; */
+    /* padding: 0; */
+    @media (max-width:1024px) {
+       display: none;
+    }
+ }
+
+ .lesson-mobile{
+    display: none; 
+ }
+    @media (max-width:1024px) {
+       .lesson-mobile{
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap; 
+          background-color: var(--color-text-light);
+          box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+          justify-content: center;
+          align-items: center;
+          height: auto;
+          min-height: 250px;
+          width: 100%;
+          border-radius: 8px;
+       }
+       .lesson-mobile .orderhistoryrow-l {
+          display: flex;
+          flex-direction: row;
+          max-height: 72px;
+          padding: 0 20px;
+          justify-content: space-between;
+          align-items: center;
+          align-self: stretch;
+          flex: 1 0 0;
+          flex-wrap: wrap; 
+          gap: auto;
+          border-bottom: 0.5px solid var(--color-primary-medium);
+       }
+    }  
+    .sbtn{
+          display: flex;
+          padding: 8px 16px;
+          justify-content: center;
+          align-items: center;
+          /* gap: 10px; */
+          flex: 1 0 0;
+          border-radius: 4px;
+          background-color: var(--color-secondary-dark);
+          max-width: 84px;
+          max-height: 31px;
+          & a{
+             color: var(--color-text-light);
+             font-family: Inter;
+             font-size: 12px;
+             font-style: normal;
+             font-weight: 400;
+             line-height: normal;
+          }
+       }
+       .sbtn:hover {
+             background-color: var(--color-secondary-medium);
+          }

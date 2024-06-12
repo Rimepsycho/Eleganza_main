@@ -1,0 +1,15 @@
+.course-container {
+    display: grid;
+    grid-template-columns: 1fr 5fr; 
+    gap: 60px;
+}
+
+@media screen and (min-width: 376px) {
+    .breadcrumb .chevron-left,
+    .breadcrumb .prev,
+    .breadcrumb .search,
+    .Filter,
+    .sort {
+        display: none;
+    }
+}

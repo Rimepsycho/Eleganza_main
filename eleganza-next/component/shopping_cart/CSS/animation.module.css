@@ -1,0 +1,172 @@
+
+ /*------------------------------動畫 -------------------------*/
+ @keyframes slideLeft {
+    0% {
+       transform: translateX(0%);
+    }
+
+    100% {
+       transform: translateX(-150%);
+    }
+ }
+
+ @keyframes slideRight {
+    0% {
+       transform: translateX(150%);
+    }
+
+    100% {
+       transform: translateX(0%);
+    }
+ }
+
+ @keyframes slideUp {
+    0% {
+       transform: translateY(0%);
+    }
+
+    100% {
+       transform: translateY(-250%);
+    }
+ }
+
+ @keyframes slideIn {
+    0% {
+       transform: translateX(150%);
+    }
+
+    100% {
+       transform: translateX(0%);
+    }
+ }
+
+ @keyframes slideDown {
+    0% {
+       height: 194px;
+    }
+
+    100% {
+       height: 0px;
+    }
+ }
+
+ .checkout-slide-left {
+    animation: slideLeft 1s forwards;
+ }
+
+ .checkout-slide-left-1 {
+    display: none;
+ }
+
+ .checkout-slide-left-down {
+    animation: slideDown 1s forwards;
+    overflow: hidden;
+ }
+
+ .checkout-slide-right {
+    animation: slideRight 1s forwards;
+    position: static !important;
+ }
+
+ .checkout-slide-up {
+    animation: slideUp 1s forwards;
+ }
+
+ .pagecomplete-slide-in {
+    animation: slideIn 1s forwards;
+ }
+
+ .pagecomplete-slide-in-1 {
+    position: static;
+ }
+
+ .hidden {
+    display: flex;
+    top: 261px;
+    left: 2880px;
+    transform: translateX(-50%);
+    padding: 0 20px;
+    justify-content: center;
+    transition: left 1s ease;
+    opacity: 0;
+    pointer-events: none;
+ }
+
+ .fcpt {
+    padding-top: 0;
+ }
+
+
+ .checkout-position {
+    position: static;
+    transition: left 1s ease;
+ }
+
+ .pagecart-dpn {
+    display: none !important;
+    
+ }
+
+ #animateBtn {
+    bottom: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+ }
+
+ #confirmPaymentBtn {
+    bottom: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 1s ease;
+ }
+
+ .d-flex {
+    transition: transform 1s ease;
+ }
+
+ .shipping-method-details {
+    transition: max-height 0.3s ease;
+    /* 添加過渡效果 */
+    overflow: hidden;
+    /* 防止內容溢出 */
+    max-height: 200px;
+    /* 當展開時的最大高度 */
+ }
+
+ .accordion-closed {
+    max-height: 0;
+    /* 收起時的高度設為0 */
+    display: none;
+    /* 隱藏狀態 */
+ }
+
+ .accordion-open {
+    max-height: 200px;
+    transition: transform 1s ease;
+    /* 展開狀態的最大高度 */
+ }
+
+ .justify-content-between {
+    transition: transform 1s ease;
+ }
+
+
+
+
+ /*-----------------事件-------*--*/
+
+
+ .collapsed {
+    display: none;
+    transition: transform 1s ease;
+    /* 收缩状态 */
+ }
+
+ @media (max-width: 992px) {
+    .collapsed992 {
+    display: none;
+    transition: transform 1s ease;
+ }
+}

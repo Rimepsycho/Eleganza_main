@@ -1,0 +1,42 @@
+.product-recommend {
+  padding-bottom: 20px;
+
+  .also {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .product-list {
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+
+    &::-webkit-scrollbar {
+      height: 3px;
+      background-color: var(--color-primary-medium);
+      border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--color-secondary-dark);
+      border-radius: 10px;
+      /* 滑塊圓角 */
+    }
+
+    /* position: absolute; */
+    .product {
+      min-width: 158px;
+    }
+  }
+}
+@media (max-width: 992px) {
+  .product-recommend {
+    .also {
+      font-size: 16px;
+    }
+
+    .product-list {
+      gap: 20px;
+    }
+  }
+}

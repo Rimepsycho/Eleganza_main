@@ -1,0 +1,160 @@
+.lessoncard {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 10px;
+  align-items: center;
+  gap: 10px;
+  /* flex: 1 0 0; */
+  width: 450px;
+  border-radius: 8px;
+  background: var(--color-text-light);
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+  @media (max-width: 1024px) {
+    border-radius: 0;
+    box-shadow: none;
+    width: 100%;
+    border-bottom: 0.5px solid var(--stroke, #9c9191);
+    align-items: center;
+    padding: 16px 10px;
+  }
+}
+.lessoncard-word {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  /* 讓上下行垂直佔滿父容器高度 */
+  color: var(--color-text-dark);
+  gap: auto;
+  @media (max-width: 1024px) {
+    align-self: stretch;
+    gap: auto;
+  }
+}
+
+.lessoncardtitle {
+  /* margin-bottom: 12px; */
+}
+
+.lessoncardimg {
+  max-width: 100px;
+  max-height: 100px;
+  border-radius: 4px;
+  background: contain no-repeat;
+  & img {
+    width: 100%;
+    height: 100%;
+  }
+  @media (max-width: 1024px) {
+    max-width: 72px;
+    max-height: 72px;
+    border-radius: 4px;
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+.lessondate {
+  font-size: var(--fs-hint);
+}
+.lessonname {
+  font-size: var(--fs-p);
+  @media (max-width: 1024px) {
+    font-size: var(--fs-hint);
+  }
+}
+.teachername {
+  font-size: var(--fs-hint);
+  font-family: var(--font-noto-sans);
+}
+@media (max-width: 1024px) {
+  .lessonname a,
+  .teachername a {
+    display: block;
+    line-height: 0;
+  }
+}
+.lessoncardtime {
+  font-size: var(--fs-p);
+  @media (max-width: 1024px) {
+    font-size: var(--fs-hint);
+  }
+}
+
+//empty狀態的樣式
+.mainarea-desktop-collection-empty {
+  background: var(--color-text-light);
+  border-radius: 8px;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; /* 自动换行 */
+  align-items: center;
+  justify-content: center;
+  width: 100%; /* 占满父容器的宽度 */
+  min-height: 458px;
+  flex: 1 0 0; /* 占满父容器的宽度不超過 */
+  gap: 18px;
+  padding: 20px;
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+.lesson-mobile-empty {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .lesson-mobile-empty {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: var(--color-text-light);
+    // box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    height: auto;
+    min-height: 300px;
+    width: 100%;
+    // border-radius: 8px;
+    padding: 20px;
+  }
+}
+.emptycontent-empty {
+  display: block;
+  align-items: center;
+  color: var(--color-text-dark);
+  font-family: var(--font-inter);
+  font-size: var(--fs-p);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  & p {
+    margin: 0;
+  }
+}
+.sbtn-empty {
+  display: flex;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  /* gap: 10px; */
+  flex: 1 0 0;
+  border-radius: 4px;
+  background-color: var(--color-secondary-dark);
+  max-width: 84px;
+  max-height: 31px;
+  & a {
+    color: var(--color-text-light);
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+.sbtn-empty:hover {
+  background-color: var(--color-secondary-medium);
+}

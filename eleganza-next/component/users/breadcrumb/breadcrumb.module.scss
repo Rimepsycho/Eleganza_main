@@ -1,0 +1,54 @@
+.list-unstyled{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+// .tabs-desktop{
+//    margin-left: 300px;
+// }
+
+.tabs-desktop ul{
+    display: flex; /* 使用 flexbox 進行水平排列 */
+    flex-direction: row;
+    align-items:flex-start;
+    list-style: none; /* 移除項目的點點符號 */
+    padding: 40px 0; /* 移除 ul 元素的預設填充 */
+    font-size: var(--fs-p);
+ }
+ .tabs-desktop a{
+    text-decoration: none;
+    color: var(--color-text-medium);
+    margin: 0 8px;
+ }
+ .tabs-desktop a:hover{
+    text-decoration: none;
+    color: var(--color-secondary-medium);
+    margin: 0 8px;
+ }
+ .tabs-desktop li.current a{
+    text-decoration: none;
+    color: var(--color-text-dark);
+    margin: 0 8px;
+ }
+    
+ .tabs-mobile{
+    display: none;
+ }
+ @media (max-width:1024px) {
+    .tabs-desktop{
+       display: none;
+    }
+    .tabs-mobile{
+       display: flex;
+       padding: 20px;
+       justify-content:flex-start;
+       
+       & a{
+          margin-inline: 4px;
+          text-decoration: none;
+          color: var(--color-secondary-dark);
+       }
+    }
+ }
+    
